@@ -1,0 +1,15 @@
+package com.test.member;
+
+public class Main {
+
+	public static void start() {
+		
+		System.out.println("*** 회원 ***");
+		
+		System.out.println("1. 로그인");
+		System.out.println("2. 로그아웃");
+		System.out.println("3. 뒤로가기");
+		
+		System.out.println("선택: ");
+	}
+}

@@ -1,0 +1,26 @@
+
+구현 기능(업무)
+- 회원
+	- 로그인/로그아웃
+- 게시판 
+	- 글쓰기
+	- 목록보기
+	- 글보기
+
+
+패키지 생성 + 파일 생성
+
+- com.test.main
+	- Main.java
+	
+
+
+- com.test.member
+	- Main.java
+- com.test.member.repository
+
+- com.test.board
+	- List.java
+
+- Community > "script.sql"
+

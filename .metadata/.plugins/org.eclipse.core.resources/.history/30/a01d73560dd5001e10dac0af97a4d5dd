@@ -1,0 +1,50 @@
+package com.test.java;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+
+public class Ex05_PreparedStatement {
+	
+	public static void main(String[] args) {
+		
+		//Ex05_PreparedStatement
+		
+		m1();
+	} //main
+
+	private static void m1() {
+		
+		//PreparedStatement
+		//- 매개 변수 지원
+		//- Statement > 정적 sql
+		//- PreparedStatement > 동적 sql
+		
+		//insert
+		String name = "하하하";
+		String age = "25";
+		String gender = "m";
+		String tel = "010-1234-5678";
+		String address = "서울시 강동구 천호동";
+		
+		Connection conn = null;
+		Statement stat = null;
+		PreparedStatement pstas = null;
+		
+		try {
+			
+			conn = DBUtil.open();
+			
+			//1. Statement
+			stat = conn.createStatement();
+			
+			String sql = String.format("", null);
+			
+			
+		} catch (Exception e) {
+			System.out.println("Ex05_PreparedStatement.m1");
+			e.printStackTrace();
+		}
+		
+	}
+}

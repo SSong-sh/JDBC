@@ -1,0 +1,25 @@
+package com.test.member;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void start() {
+		
+		System.out.println("*** 회원 ***");
+		
+		System.out.println("1. 로그인");
+		System.out.println("2. 로그아웃");
+		System.out.println("3. 뒤로가기");
+		
+		System.out.println("선택: ");
+	}
+	
+	public static void pause() {
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("계속하려면 엔터를 입력하세요.");
+		scan.nextLine();
+		
+	}
+}
