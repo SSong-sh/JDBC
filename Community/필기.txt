@@ -12,15 +12,28 @@
 
 - com.test.main
 	- Main.java
-	
+	- DBUtil.java 복사
 
 
 - com.test.member
 	- Main.java
+	
+	
 - com.test.member.repository
+	- MemberDAO.java
+- com.test.member.model
+	-MemberDTO.java
 
 - com.test.board
+	- BoardMain.java
 	- List.java
+	- Add.java
+
+- com.test.board.repository
+	- BoardDAO.java
+	
+- com.test.board.model
+	- BoardDTO.java
 
 - Community > "script.sql"
 

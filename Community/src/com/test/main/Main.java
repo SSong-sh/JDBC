@@ -2,6 +2,9 @@ package com.test.main;
 
 import java.util.Scanner;
 
+import com.test.board.BoardMain;
+import com.test.member.MemberMain;
+
 public class Main {
 	
 	public static void main(String[] args) {
@@ -15,16 +18,14 @@ public class Main {
 		System.out.println("1. 회원");
 		System.out.println("2. 게시판");
 		
-		System.out.println("선택: ");
+		System.out.print("선택: ");
 		
 		String sel = scan.nextLine();
 		
 		if (sel.equals("1")) {
-			
-			com.test.member.Main.start();
-			
+			MemberMain.start();
 		} else if (sel.equals("2")) {
-			
+			BoardMain.start();
 		} else {
 			loop = false;
 		}

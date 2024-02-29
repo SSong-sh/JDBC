@@ -1,0 +1,12 @@
+package com.test.board.repository;
+
+import com.test.board.model.BoardDTO;
+
+public class BoardDAO {
+
+	public int add(BoardDTO dto) {
+		
+		return 0;
+	}
+
+}

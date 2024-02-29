@@ -1,0 +1,5 @@
+package com.test.memeber.repository;
+
+public class MemberDAO {
+
+}

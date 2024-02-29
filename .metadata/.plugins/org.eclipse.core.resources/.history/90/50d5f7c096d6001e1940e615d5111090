@@ -1,0 +1,11 @@
+package com.test.board;
+
+public class BoardMain {
+
+	public static void start() {
+		
+		
+		
+	}
+
+}

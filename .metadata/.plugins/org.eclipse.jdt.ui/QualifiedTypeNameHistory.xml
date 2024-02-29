@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.test.member.Main"/>
+    <fullyQualifiedTypeName name="com.test.memeber.repository.MemberDAO"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="com.test.main.DBUtil"/>
+    <fullyQualifiedTypeName name="com.test.member.model.MemberDTO"/>
+    <fullyQualifiedTypeName name="com.test.main.Main"/>
+    <fullyQualifiedTypeName name="com.test.member.MemberMain"/>
+    <fullyQualifiedTypeName name="lombok.Getter"/>
+    <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+</qualifiedTypeNameHistroy>

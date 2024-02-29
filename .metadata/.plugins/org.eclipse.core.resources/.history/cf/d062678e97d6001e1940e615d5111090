@@ -1,0 +1,27 @@
+package com.test.board.repository;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.test.board.model.BoardDTO;
+
+public class BoardDAO {
+
+	private Connection conn;
+	private Statement stat;
+	private PreparedStatement pstat;
+	private ResultSet rs;
+	
+	
+	
+	public int add(BoardDTO dto) {
+		
+		
+		
+		
+		return 0;
+	}
+
+}

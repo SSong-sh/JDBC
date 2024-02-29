@@ -1,0 +1,72 @@
+package com.test.board.repository;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.test.board.model.BoardDTO;
+import com.test.main.DBUtil;
+
+public class BoardDAO {
+
+	private Connection conn;
+	private Statement stat;
+	private PreparedStatement pstat;
+	private ResultSet rs;
+	
+	public BoardDAO() {
+		
+		conn = DBUtil.open("localhost", "jdbc", "java1234");
+		
+		
+	}	
+	
+	public int add(BoardDTO dto) {
+		
+		try {
+			
+			String sql = "insert into tblBoard values (seqBoard.nextVal,? ,? ,default,?)";
+			
+			pstat = conn.prepareStatement(sql);
+			
+			pstat.setString(1, dto.getSubject());
+			pstat.setString(2, dto.getContent());
+			pstat.setString(3, dto.getId());
+			
+			return pstat.executeUpdate(); //1,0
+			
+		} catch (Exception e) {
+			System.out.println("BoardDAO.add");
+			e.printStackTrace();
+		}
+
+		
+		
+		return 0;
+	}
+
+	public ResultSet list() {
+		
+		try {
+			
+			String sql = "select * from tblBoard order by seq desc";
+			
+			stat = conn.createStatement();
+			
+			rs = stat.executeQuery(sql);
+			
+			//ResultSet > 일반 자바 코드
+			// 
+			
+			return rs;
+			
+		} catch (Exception e) {
+			System.out.println("BoardDAO.list");
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+
+}

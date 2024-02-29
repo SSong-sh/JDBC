@@ -1,0 +1,62 @@
+package com.test.member;
+
+import java.util.Scanner;
+
+import com.test.member.model.MemberDTO;
+import com.test.memeber.repository.MemberDAO;
+
+public class Main {
+
+	public static void start() {
+
+		boolean loop = true;
+		Scanner scan = new Scanner(System.in);
+
+		while (loop) {
+			System.out.println("*** 회원 ***");
+
+			System.out.println("1. 로그인");
+			System.out.println("2. 로그아웃");
+			System.out.println("3. 뒤로가기");
+
+			System.out.println("선택: ");
+
+			String sel = scan.nextLine();
+
+			if (sel.equals("1")) {
+				login();
+			} else if (sel.equals("2")) {
+
+			} else {
+				loop = false;
+			}
+
+			System.out.println("*** 종료 ***");
+
+		} //while
+
+	} //start
+
+	private static void login() {
+		
+		//DB 접속 > 인증 절차 
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("===== 로그인 =====");
+		
+		System.out.println("아이디: ");
+		String id = scan.nextLine();
+		
+		System.out.println("암호: ");
+		String pw = scan.nextLine();
+		
+		MemberDAO dao = new MemberDAO();
+		
+		MemberDTO dto = new MemberDTO();
+		dto.setId(id);
+		dto.setPw(pw);
+		
+		dao.login(id, pw);
+
+	}
+}
